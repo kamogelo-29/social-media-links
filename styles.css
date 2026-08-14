@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* We start with a small design of 375px */
+:root{
+
+    --body-bg: hsl(0, 0%, 8%);
+    --primary-green: hsl(75, 94%, 57%);
+    --text-color: hsl(0, 0%, 100%);
+    --card-bg: hsl(0, 0%, 12%);
+    --soft-text-grey: hsl(0, 0%, 20%);
+}
+
+@font-face {
+    font-family: Inter ;
+    src: url(assets/fonts/Inter-VariableFont_slnt\,wght.ttf);
+}
+
+body{
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    font-size: small;
+    line-height: 1.6;
+    height: 100vh;
+    background-color: var(--body-bg);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Redesign from full screen */
+
+.social-link-card{
+    width: min(85%, 350px);
+    height: auto;
+    background-color: var(--card-bg);
+    /* box-shadow: 5px 20px 10px hsl(60, 100%, 30%) ; */
+    margin-block-start: 50px;
+    margin-block-end: 20px;
+    margin-inline: auto;
+    padding-block: 1em;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+img{
+    display: block;
+    margin-block-end: 20px;
+    /* margin-inline: auto; */
+    border-radius: 50%;
+    width: 25%;
+}
+
+.user_name{
+    font-size: clamp(1.9em, 3vw, 2em);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.location{
+    font-size: clamp(0.975em, 1vw, 0.8em);
+    font-weight: 600;
+    color: var(--primary-green);
+}
+
+.bio{
+    font-size: clamp(0.84em, 2.5vh, 0.875em);
+    line-height: 1.7;
+    font-weight: 400;
+    margin-block-start: 15px;
+    word-spacing: 0.1em;
+}
+
+ul{
+    margin-block-start: 10px;
+}
+
+ul > li{
+    list-style: none;
+    margin-block-end: 1.5em;
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+}
+
+ul > li > a{
+    width: 100%;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    background-color: var(--soft-text-grey);
+    padding-block: 0.9em;
+    padding-inline: 6.1em;
+    border-radius: 5px;
+}
+
+ul > li > a:hover{
+    background-color: var(--primary-green);
+    color: var(--body-bg);
+    transition: all 0.3s ease-in-out;
+}
+
+ul > li > a:focus-visible{
+    background-color: orange;
+    color: var(--body-bg);
+    transition: all 0.3s ease-in;
+}
+
+/* Media Query for screens larger than 768px */
+@media (min-width: 768px) {
+    body{
+        font-size: xx-small;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    img{
+        display: block;
+        margin-block-end: 20px;
+        border-radius: 50%;
+        width: 25%;
+    }
+
+    .user_name{
+        font-size: 1.57rem;
+    }
+
+    .location{
+        font-size: 0.87rem;
+    }
+
+    .bio{
+        font-size: 0.75rem;
+        line-height: 1.7;
+        font-weight: 400;
+        margin-block-start: 12px;
+      
+    }
+
+    ul > li > a{
+        font-size: 0.9rem;
+        width: 100%;
+        display: inline-block;
+        padding-block: 0.95em;
+        padding-inline: 6.1em;
+        border-radius: 5px;
+    }
+}
