@@ -19,8 +19,7 @@ The page contains:
 
 ### Links
 
-- Solution URL: Add my Frontend Mentor solution URL here
-- Live Site URL: Add my live site URL here
+- Live Site URL: https://kamogelo-29.github.io/social-media-links/
 - GitHub: https://github.com/kamogelo-29
 
 ## My process
